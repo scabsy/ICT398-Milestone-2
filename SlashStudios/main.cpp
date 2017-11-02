@@ -173,9 +173,23 @@ int main()
 	allGOs.push_back(desk);
 
 	//people
-	allGOs.push_back(new Person_Machine(vector3df(-55, 0, 580), smgr)); 
-	allGOs.push_back(new Person_Cardio(vector3df(-55, 0, 180), smgr));
-	allGOs.push_back(new Person_FreeWeight(vector3df(-55, 0, -580), smgr));
+	vector<vector3df> pm1Locs;
+	vector<vector3df> pc1Locs;
+	vector<vector3df> pf1Locs;
+
+	pm1Locs.push_back(vector3df(-155, 0, 0));
+	//pm1Locs.push_back(vector3df(-154, 0, 0));
+
+	pc1Locs.push_back(vector3df(0, 0, -580));
+	pc1Locs.push_back(vector3df(15, 0, 0));
+	//pc1Locs.push_back(vector3df(-150, 0, 180));
+	
+	pf1Locs.push_back(vector3df(0, 0, 780));
+	//pf1Locs.push_back(vector3df(0, 0, 781));
+
+	allGOs.push_back(new Person_Machine(pm1Locs, smgr)); 
+	allGOs.push_back(new Person_Cardio(pc1Locs, smgr));
+	allGOs.push_back(new Person_FreeWeight(pf1Locs, smgr));
 
 	//small weights
 	allGOs.push_back(new Weight("./media/weight_small.obj", vector3df(230, 53, 100 - 0 * 30), vector3df(0, 0, 25), 0.020f, true, 0.50f, smgr));
@@ -242,36 +256,47 @@ int main()
 			}
 		}
 
-		if (input->IsKeyDown(KEY_KEY_E))
-		{
-			for (list<GameObject*>::Iterator it = allGOs.begin(); it != allGOs.end(); ++it)
-			{
-				float distX = ((*it)->GetPosition().X - camera->GetPosition().X);
-				float distZ = ((*it)->GetPosition().Z - camera->GetPosition().Z);
+		
 
-				if (distX < 0)
+		for (list<GameObject*>::Iterator it = allGOs.begin(); it != allGOs.end(); ++it)
+		{
+			(*it)->Update(allGOs);
+			float distX = ((*it)->GetPosition().X - camera->GetPosition().X);
+			float distZ = ((*it)->GetPosition().Z - camera->GetPosition().Z);
+
+			if (distX < 0)
+			{
+				distX = -distX;
+			}
+			if (distZ < 0)
+			{
+				distZ = -distZ;
+			}
+			//cout << distX << endl;
+			if (distX <= 50 && distZ <= 50)
+			{
+				if (input->IsKeyDown(KEY_KEY_E))
 				{
-					distX = -distX;
-				}
-				if (distZ < 0)
-				{
-					distZ = -distZ;
-				}
-				//cout << distX << endl;
-				if (distX <= 50 && distZ <=50)
-				{
-					cout << camera->MatchAffordances((*it)) << endl;
 					if (camera->MatchAffordances((*it)))
 					{
 						(*it)->Interact(camera);
 					}
 				}
+				if (input->IsKeyDown(KEY_KEY_R))
+				{
+					if (camera->MatchAffordances(new Affordance("insult", 1)))
+					{
+						((Person*)(*it))->Insult();
+					}
+				}
+				if (input->IsKeyDown(KEY_KEY_F))
+				{
+					if (camera->MatchAffordances(new Affordance("praise", 1)))
+					{
+						((Person*)(*it))->Praise();
+					}
+				}
 			}
-		}
-
-		for (list<GameObject*>::Iterator it = allGOs.begin(); it != allGOs.end(); ++it)
-		{
-			(*it)->Update(allGOs);
 		}
 		
 		camera->Update(allGOs);		

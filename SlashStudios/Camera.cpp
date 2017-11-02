@@ -28,9 +28,11 @@ Camera::Camera(float rotationSpeed,float movementSpeed, vector3df position,IScen
 	}
 
 
-	AddAffordance("pickup", 0.8f);
-	AddAffordance("",0.6f);
+	AddAffordance("freeweight", 0.8f);
+	AddAffordance("machineweight",0.6f);
 	AddAffordance("run", 0.6f);
+	AddAffordance("insult", 1);
+	AddAffordance("praise", 1);
 }
 
 void Camera::CreateAABB(vector3df mins,vector3df maxs)

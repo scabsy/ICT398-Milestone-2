@@ -6,7 +6,9 @@
 class Person_Machine : public Person
 {
 public:
-	Person_Machine(vector3df position, ISceneManager* smgr);
+	Person_Machine(vector<vector3df> position, ISceneManager* smgr);
+	void Insult() override;
+	void Praise() override;
 private:
 
 };

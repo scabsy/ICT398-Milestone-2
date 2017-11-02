@@ -175,3 +175,16 @@ bool GameObject::MatchAffordances(GameObject* other)
 
 	return false;
 }
+
+bool GameObject::MatchAffordances( Affordance* afford)
+{	
+	for (size_t j = 0; j < affordances.size(); j++)
+	{
+		if (afford->Compare(affordances[j]))
+		{
+			return true;
+		}
+	}	
+
+	return false;
+}

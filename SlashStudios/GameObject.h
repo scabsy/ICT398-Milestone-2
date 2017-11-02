@@ -36,6 +36,7 @@ public:
 
 	void AddAffordance(std::string affName, float affVal);
 	bool MatchAffordances(GameObject* other);
+	bool MatchAffordances(Affordance* afford);
 
 	void CreateAABB();
 	void CreateAABB(vector3df position, vector3df whd);

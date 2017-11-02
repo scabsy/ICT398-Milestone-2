@@ -121,6 +121,7 @@
     <ClCompile Include="Affordance.cpp" />
     <ClCompile Include="AIStates.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Emotion.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Machine.cpp" />
     <ClCompile Include="Person_Cardio.cpp" />
@@ -128,6 +129,7 @@
     <ClCompile Include="Person_Machine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="States_Person.cpp" />
     <ClCompile Include="Treadmill.cpp" />
     <ClCompile Include="Weight.cpp" />
   </ItemGroup>
@@ -135,6 +137,7 @@
     <ClInclude Include="Affordance.h" />
     <ClInclude Include="AIStates.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Emotion.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Person_Cardio.h" />
     <ClInclude Include="Person_FreeWeight.h" />
@@ -145,6 +148,7 @@
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="States_Person.h" />
     <ClInclude Include="Treadmill.h" />
     <ClInclude Include="Weight.h" />
   </ItemGroup>

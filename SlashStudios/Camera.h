@@ -1,9 +1,9 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-#include "GameObject.h"
+#include "Person.h"
 
-class Camera:public GameObject
+class Camera:public Person
 {
 public:
 	Camera(float rotationSpeed,float movementSpeed, vector3df position, ISceneManager* smgr);

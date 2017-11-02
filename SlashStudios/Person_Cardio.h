@@ -6,7 +6,9 @@
 class Person_Cardio : public Person
 {
 public:
-	Person_Cardio(vector3df position, ISceneManager* smgr);
+	Person_Cardio(vector<vector3df> position, ISceneManager* smgr);
+	void Insult() override;
+	void Praise() override;
 private:
 
 };

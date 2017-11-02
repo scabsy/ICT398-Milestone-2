@@ -6,7 +6,9 @@
 class Person_FreeWeight : public Person
 {
 public:
-	Person_FreeWeight(vector3df position, ISceneManager* smgr);
+	Person_FreeWeight(vector<vector3df> position, ISceneManager* smgr);
+	void Insult() override;
+	void Praise() override;
 private:
 
 };
