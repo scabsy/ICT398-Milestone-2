@@ -6,14 +6,6 @@ GameObject::GameObject()
 	//node = 0;
 }
 
-GameObject::GameObject(vector3df position, vector3df whd)
-{
-	node = 0;
-	g_position=position;
-	CreateAABB(position, whd);
-}
-
-//GameObject::GameObject(io::path modelPath, vector3df position, vector3df rotation, float scale, bool createCollision, ISceneManager* smgr, bool inside, int AItype)
 GameObject::GameObject(path modelPath, vector3df position, vector3df rotation, float scale, bool createCollision, ISceneManager* smgr)
 {
 	node = 0;
@@ -92,6 +84,16 @@ ISceneNode* GameObject::GetNode()
 	return node;
 }
 
+void GameObject::SetNode(ISceneNode* n)
+{
+	node = n;
+}
+
+void GameObject::SetAABB(aabbox3d<f32> naabb)
+{
+	aabb = naabb;
+}
+
 void GameObject::CreateAABB()
 {
 	vector3df tmpMin;
@@ -101,16 +103,6 @@ void GameObject::CreateAABB()
 	tmpMin = ((IAnimatedMeshSceneNode*)node)->getMesh()->getBoundingBox().MinEdge*GetScale();
 	tmpMax = ((IAnimatedMeshSceneNode*)node)->getMesh()->getBoundingBox().MinEdge*GetScale();
 	aabb=aabbox3df(tmpMin,tmpMax);
-	aabb.getEdges(edges);
-}
-
-void GameObject::CreateAABB(vector3df position, vector3df whd)
-{
-	vector3d<f32>* edges = new vector3d<f32>[8];
-	vector3df aabbMins = vector3df(position.X - whd.X / 2, position.Y - whd.Y / 2, position.Z - whd.Z / 2);
-	vector3df aabbMaxs = vector3df(position.X + whd.X / 2, position.Y + whd.Y / 2, position.Z + whd.Z / 2);
-
-	aabb = aabbox3d<f32>(aabbMins, aabbMaxs);
 	aabb.getEdges(edges);
 }
 

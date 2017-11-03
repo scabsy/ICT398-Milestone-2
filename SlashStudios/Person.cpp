@@ -1,5 +1,5 @@
 #include "Person.h"
-#include "AIStates.h"
+#include "States_Emotion.h"
 #include <math.h>
 
 using namespace std;
@@ -81,7 +81,7 @@ void Person::SetEmotion(Emotion* nemotion)
 
 void Person::NextTargetLocation()
 {
-	if (target_location < possible_locations.size()-1)
+	if ((unsigned int)target_location < possible_locations.size()-1)
 	{
 		target_location++;
 	}

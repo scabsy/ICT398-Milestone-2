@@ -9,11 +9,11 @@ Emotion::Emotion()
 	sadness = 0.5f;
 	surprise = 0.5f;
 }
-Emotion::Emotion(float nhappiness, float nanger, float ndistgust, float nfear, float nsadness, float nsurprise)
+Emotion::Emotion(float nhappiness, float nanger, float ndisgust, float nfear, float nsadness, float nsurprise)
 {
 	happiness = nhappiness;
 	anger = nanger;
-	disgust = ndistgust;
+	disgust = ndisgust;
 	fear = nfear;
 	sadness = nsadness;
 	surprise = nsurprise;
