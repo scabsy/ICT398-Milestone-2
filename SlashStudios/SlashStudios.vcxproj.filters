@@ -24,9 +24,6 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AIStates.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -51,6 +48,15 @@
     <ClCompile Include="Treadmill.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Emotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="States_Person.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="States_Emotion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameObject.h">
@@ -69,9 +75,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="InputReceiver.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="AIStates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Person.h">
@@ -96,6 +99,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Treadmill.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Emotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="States_Person.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="States_Emotion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

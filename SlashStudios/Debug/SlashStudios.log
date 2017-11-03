@@ -1,14 +1,10 @@
-﻿  Weight.cpp
-  Treadmill.cpp
-  Person.cpp
-  main.cpp
-  Person_Machine.cpp
-  Person_FreeWeight.cpp
-  Person_Cardio.cpp
-  Machine.cpp
-  GameObject.cpp
-  Camera.cpp
-  AIStates.cpp
-  Affordance.cpp
-  Generating Code...
-  SlashStudios.vcxproj -> F:\Uni\398\Presentation\Irrlich\Debug\SlashStudios.exe
+﻿Build started 03/11/2017 14:11:52.
+     1>Project "C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\SlashStudios\SlashStudios.vcxproj" on node 2 (Build target(s)).
+       Project file contains ToolsVersion="15.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
+     1>Link:
+         SlashStudios.vcxproj -> C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\Debug\SlashStudios.exe
+     1>Done Building Project "C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\SlashStudios\SlashStudios.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.13

@@ -34,7 +34,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v110</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -98,10 +98,12 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(ProjectDir)\libraries\irrlicht-1.8.4\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ProjectDir)\libraries\irrlicht-1.8.4\lib\Win32-visualstudio;</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -119,8 +121,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Affordance.cpp" />
-    <ClCompile Include="AIStates.cpp" />
+    <ClCompile Include="States_Emotion.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Emotion.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="Machine.cpp" />
     <ClCompile Include="Person_Cardio.cpp" />
@@ -128,13 +131,15 @@
     <ClCompile Include="Person_Machine.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="States_Person.cpp" />
     <ClCompile Include="Treadmill.cpp" />
     <ClCompile Include="Weight.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Affordance.h" />
-    <ClInclude Include="AIStates.h" />
+    <ClInclude Include="States_Emotion.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Emotion.h" />
     <ClInclude Include="Machine.h" />
     <ClInclude Include="Person_Cardio.h" />
     <ClInclude Include="Person_FreeWeight.h" />
@@ -145,6 +150,7 @@
     <ClInclude Include="Singleton.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="StateMachine.h" />
+    <ClInclude Include="States_Person.h" />
     <ClInclude Include="Treadmill.h" />
     <ClInclude Include="Weight.h" />
   </ItemGroup>

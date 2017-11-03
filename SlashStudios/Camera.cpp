@@ -16,31 +16,32 @@ Camera::Camera(float rotationSpeed,float movementSpeed, vector3df position,IScen
 	keyMap[5].Action = EKA_CROUCH;
 	keyMap[5].KeyCode = KEY_KEY_C;
 
-	node = (ICameraSceneNode*)smgr->addCameraSceneNodeFPS(0, rotationSpeed, movementSpeed, 0, keyMap, 6, true, 3.f);
-	node->setPosition(position);
+	SetNode((ICameraSceneNode*)smgr->addCameraSceneNodeFPS(0, rotationSpeed, movementSpeed, 0, keyMap, 6, true, 3.f));
+	GetNode()->setPosition(position);
 
 	if(selector)
 	{
-		ISceneNodeAnimator* anim = smgr->createCollisionResponseAnimator(selector, node, vector3df(5, 5, 5), vector3df(0, -10, 0), vector3df(0, position.Y / 2, 0));
+		ISceneNodeAnimator* anim = smgr->createCollisionResponseAnimator(selector, GetNode(), vector3df(5, 5, 5), vector3df(0, -10, 0), vector3df(0, position.Y / 2, 0));
 		selector->drop();
-		node->addAnimator(anim);
+		GetNode()->addAnimator(anim);
 		anim->drop();
 	}
 
-
-	AddAffordance("pickup", 0.8f);
-	AddAffordance("",0.6f);
+	AddAffordance("freeweight", 0.8f);
+	AddAffordance("machineweight",0.6f);
 	AddAffordance("run", 0.6f);
+	AddAffordance("insult", 1);
+	AddAffordance("praise", 1);
 }
 
 void Camera::CreateAABB(vector3df mins,vector3df maxs)
 {
-	aabb = aabbox3df(mins, maxs);
+	SetAABB(aabbox3df(mins, maxs));
 }
 
 float Camera::GetRotationY()
 {
-	return node->getRotation().Y;
+	return GetNode()->getRotation().Y;
 }
 
 void Camera::Update(list<GameObject*> other)
@@ -57,3 +58,4 @@ void Camera::Update(list<GameObject*> other)
 	
 	SetOldPosition(GetPosition());
 }
+
