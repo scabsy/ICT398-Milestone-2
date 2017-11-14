@@ -3,12 +3,13 @@
 Weight::Weight(path modelPath, vector3df position, vector3df rotation, float scale, bool createCollision, float weight, ISceneManager* smgr) :GameObject(modelPath, position, rotation, scale, createCollision, smgr)
 {
 	SetInteractor(NULL);
-	AddAffordance("pickup", weight);
+	AddAffordance("freeweight", weight);
 }
 
 
 void Weight::Interact(GameObject* ninteractor)
 {
+	cout << "kj"<<endl;
 	if (GetInteractor() != NULL)
 	{
 		SetInteractor(NULL);

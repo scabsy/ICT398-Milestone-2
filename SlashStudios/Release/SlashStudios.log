@@ -1,17 +1,9 @@
-﻿Build started 03/11/2017 17:08:06.
+﻿Build started 14/11/2017 15:33:04.
      1>Project "C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\SlashStudios\SlashStudios.vcxproj" on node 2 (Build target(s)).
        Project file contains ToolsVersion="15.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\SlashStudios\\libraries\irrlicht-1.8.4\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt States_Emotion.cpp Camera.cpp GameObject.cpp Person_Cardio.cpp Person_FreeWeight.cpp Person_Machine.cpp main.cpp Person.cpp States_Person.cpp
-         States_Emotion.cpp
-         Camera.cpp
-         GameObject.cpp
-         Person_Cardio.cpp
-         Person_FreeWeight.cpp
-         Person_Machine.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\SlashStudios\\libraries\irrlicht-1.8.4\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-         Person.cpp
-         States_Person.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\Release\SlashStudios.exe" /NOLOGO /LIBPATH:"C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\SlashStudios\\libraries\irrlicht-1.8.4\lib\Win32-visualstudio" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:"C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\Release\SlashStudios.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\samfl\Documents\Uni\398\Engine\Gym\ICT398-Milestone-2\ICT398-Milestone-2\Release\SlashStudios.lib" /MACHINE:X86 /SAFESEH Release\Affordance.obj
          Release\States_Emotion.obj
@@ -34,4 +26,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:13.23
+Time Elapsed 00:00:03.40

@@ -36,8 +36,6 @@ float Affordance::GetValue()
 
 bool Affordance::Compare(Affordance* b)
 {
-	//name = b->GetName();
-	cout << value << " " << b->GetValue() << endl;
 	if (!name.compare(b->GetName()) && value >= b->GetValue())
 	{
 		return true;
